@@ -13,8 +13,8 @@ try:
         file_cont = f.read().split()
     striing = 'hello'
     if striing in file_cont:
-        print('yes')
+        print('Рядок знайдено')
     else:
-        print('no')
+        print('Рядок не знайдено')
 except Exception as e:
     print(f'error: {e}')
