@@ -11,3 +11,5 @@ try:
             print(f"Рядок з номером {line_number} не знайдено")
 except Exception as e:
     print(e)
+finally:
+    f.close()
