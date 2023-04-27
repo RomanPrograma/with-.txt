@@ -1,17 +1,16 @@
-
 try:
-    with open('with.txt', 'r') as f:
-         content = f.read()
-         lines = set()
-         for line in content.split():
-            if line in lines:
-                print('File contains duplicate lines')
-                break
-            lines.add(line)
-         else:
-            print('File does not contain duplicate lines')
+    with open( "with_.txt", "r" ) as f:
+        content = f.readlines()
+        n = int(input("Enter quantity lines: "))
+
+        for num, line in enumerate(content[-n:]):
+            print( line, end='')
+        print()
+        if n > len(content):
+            print( "Error: The file does not have that many lines", end= '' )
+        elif n < len(content):
+            print()
 except Exception as e:
-    print(e)
+    print( "Error: " + str(e) )
 finally:
-    print('Execution completed')
     f.close()
